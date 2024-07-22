@@ -1,0 +1,140 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+textarea {
+  border: 2px solid black;
+}
+
+.body1 {
+  position: sticky;
+  top: 0;
+  width: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 0px 0px 10px;
+  z-index: 2;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 5px 2px, inset 0px 0px 5px;
+  z-index: 1;
+}
+
+.button {
+  width: 5.5em;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 4px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.button--black {
+  background: black;
+  color: white;
+}
+.button--green {
+  padding: 8px 4px;
+  background: green;
+  color: white;
+}
+.button__filterSort {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filterSort {
+  text-align: center;
+  margin-bottom: 0.9em;
+  display: none;
+}
+
+.containerLogin, .containerRegister {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  visibility: hidden;
+}
+
+:is(.containerLogin, .containerRegister):target {
+  visibility: visible;
+}
+
+:is(.containerLogin, .containerRegister):active {
+  visibility: hidden;
+}
+
+.iframeLogin {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iframeRegister {
+  position: absolute;
+  width: 450px;
+  height: 560px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.body {
+  width: 75.88em;
+  margin: 52px auto 45px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.item {
+  display: inline-block;
+  width: 200px;
+  margin: 20px 19.23px;
+}
+.item__thumbnail {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.item__thumbnail:hover {
+  transform: scale(1.2);
+}
+.item__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.item__price {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}/*# sourceMappingURL=style.css.map */
